@@ -1,0 +1,24 @@
+{
+  "name": "pokebot",
+  "version": "0.0.1",
+  "description": "Search for any pokemon data directly in discord",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mrthomas20121-Bots/PokeBot.git"
+  },
+  "keywords": [
+    "Pokémon",
+    "discord",
+    "bot"
+  ],
+  "author": "Mrthomas20121",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Mrthomas20121-Bots/PokeBot/issues"
+  },
+  "homepage": "https://github.com/Mrthomas20121-Bots/PokeBot#readme"
+}
