@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/Mrthomas20121-Bots/PokeBot/issues"
   },
-  "homepage": "https://github.com/Mrthomas20121-Bots/PokeBot#readme"
+  "homepage": "https://github.com/Mrthomas20121-Bots/PokeBot#readme",
+  "dependencies": {
+    "eris": "^0.17.2"
+  }
 }
