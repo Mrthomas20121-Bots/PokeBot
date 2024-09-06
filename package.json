@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "Search for any pokemon data directly in discord",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -22,6 +23,7 @@
   },
   "homepage": "https://github.com/Mrthomas20121-Bots/PokeBot#readme",
   "dependencies": {
-    "eris": "^0.17.2"
+    "eris": "^0.17.2",
+    "pokedex-promise-v2": "^4.2.0"
   }
 }
