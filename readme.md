@@ -8,5 +8,5 @@ Pokébot is an all purpose pokémon discord bot to get info about pokemons direc
 - run `npm install`
 - run `npm start`
 - profit
-## support me
-you can support me on [Kofi](https://ko-fi.com/mrthomas20121)
+## Financial support
+since I am the one hosting the bot on a server(the bot is not hosted anywhere yet), You can donate to me on [Kofi](https://ko-fi.com/mrthomas20121) to help with the server cost.
