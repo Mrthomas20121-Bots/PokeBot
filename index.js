@@ -55,11 +55,11 @@ bot.on("interactionCreate", async (interaction) => {
                     console.log(error);
                 });
         }
-        else if(name == 'abilitylist') {
+        else if(name == 'ability') {
             let args = interaction.data.options;
 
-            if(args[0] == 'list') {
-                pokedex.getAbilityByName('13')
+            if(typeof args !== 'undefined') {
+                pokedex.getAbilityByName(args[0])
                 .then(ability => {
                     interaction.createMessage(ability.name);
                 }).catch(error => {
@@ -70,4 +70,5 @@ bot.on("interactionCreate", async (interaction) => {
     }
 });
 
+// connect the bot
 bot.connect();
