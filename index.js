@@ -22,14 +22,23 @@ bot.on('ready', async () => {
         description: 'Look up an ability',
         options: [
             {
-                name: 'list',
-                description: 'List all ability by name',
+                name: 'name',
+                description: 'Get an ability',
                 type: Constants.ApplicationCommandOptionTypes.STRING,
-                required: true,
+                required: true
+            },
+            {
+                name: 'language',
+                description: 'in what language should the ability be shown? (default to english if this is not set)',
+                type: Constants.ApplicationCommandOptionTypes.STRING,
                 choices: [
                     {
-                        name: 'list',
-                        value: 'list'
+                        name: 'en',
+                        value: 'en'
+                    },
+                    {
+                        name: 'de',
+                        value: 'de'
                     }
                 ]
             }
@@ -59,15 +68,30 @@ bot.on("interactionCreate", async (interaction) => {
             let args = interaction.data.options;
 
             if(typeof args !== 'undefined') {
-                pokedex.getAbilityByName(args[0])
+                let lang = args.length == 1 ? 'en' : args[1].value;
+                pokedex.getAbilityByName(args[0].value)
                 .then(ability => {
-                    interaction.createMessage(ability.name);
+                    let effect = ability.effect_entries.find(e => e.language.name == lang);
+                    interaction.createMessage({
+                        embeds: [
+                            {
+                                title: ability.names.filter(e => e.language.name == lang)[0].name,
+                                description: effect.effect,
+                                color:0xFFC58E
+                            }
+                        ]
+                    });
+
                 }).catch(error => {
                     console.log(error);
                 });
             }
         }
     }
+});
+
+bot.on('error', (err, id) => {
+    logger.error(err.message);
 });
 
 // connect the bot
