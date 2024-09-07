@@ -1,5 +1,5 @@
 # Pokébot
-Pokébot is an all purpose pokémon discord bot to get info about pokemons directly in the discord app.
+Pokébot is a discord bot to view pokemon data directly in the discord app.
 ## how to setup at home
 - create an bot(app) on discord's website, and keep the bot page open
 - clone this project
